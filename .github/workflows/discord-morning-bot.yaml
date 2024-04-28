@@ -1,7 +1,7 @@
 name: Discord morning bot
 
 on:
-  cron:
+  schedule:
     - cron: '10 11 * * *'  # minute-hour-day-month-weekday UTC
 
 jobs:
