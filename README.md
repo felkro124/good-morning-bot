@@ -1,1 +1,1 @@
-# minute-bot
+# good-morning-bot
