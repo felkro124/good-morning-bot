@@ -3,6 +3,7 @@ name: Discord morning bot
 on:
   schedule:
     - cron: '28 11 * * *'  # minute-hour-day-month-weekday UTC
+  workflow_dispatch:
 
 jobs:
     wake_up:
