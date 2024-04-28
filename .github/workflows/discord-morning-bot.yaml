@@ -2,7 +2,7 @@ name: Discord morning bot
 
 on:
   schedule:
-    - cron: '28 11 * * *'  # minute-hour-day-month-weekday UTC
+    - cron: '0 7 * * *'  # minute-hour-day-month-weekday UTC
   workflow_dispatch:
 
 jobs:
@@ -11,4 +11,4 @@ jobs:
         steps:
             - name: Good morning message
               run: |
-                curl -X POST -H 'Content-type: application/json' --data '{"content":"Good morning!☀️"}' ${{ secrets.DISCORD_WEBHOOK }}
+                curl -v -X POST -H 'Content-type: application/json' --data '{"content":"Good morning!☀️"}' ${{ secrets.DISCORD_WEBHOOK }}
