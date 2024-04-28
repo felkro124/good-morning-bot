@@ -1,0 +1,13 @@
+name: Discord morning bot
+
+on:
+  cron:
+    - cron: '10 11 * * *'  # minute-hour-day-month-weekday UTC
+
+jobs:
+    wake_up:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Good morning message
+              run: |
+                curl -X POST -H 'Content-type: application/json' --data '{"content":"Good morning!☀️"}' ${{ secrets.DISCORD_WEBHOOK }}
