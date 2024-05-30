@@ -2,7 +2,7 @@ name: Discord morning bot
 
 on:
   schedule:
-    - cron: '50 5 * * *'  # minute-hour-day-month-weekday UTC
+    - cron: '00 5 * * *'  # minute-hour-day-month-weekday UTC
   workflow_dispatch:
 
 jobs:
